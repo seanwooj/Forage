@@ -4391,6 +4391,13 @@ table {
     border-left: 20px solid #AFCD5C;
     margin: 50px auto 150px; }
 
+.main {
+  margin-top: 2em; }
+
+article {
+  border-left: 20px solid #F7C92E;
+  padding-left: 1em; }
+
 @font-face {
   font-family: 'Desyrel';
   src: url("fonts/desyrel-webfont.eot");

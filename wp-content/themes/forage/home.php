@@ -16,13 +16,11 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'content', 'page-header' ); ?>
 
-			<div class="row lifted-content">
+			<div class="row main">
 				<div class="large-9 columns" role="main">
-					<?php get_template_part( 'widget-area-home-top' ); ?>
 					<div>
-						<?php get_template_part( 'content', 'page' ); ?>
+
 					</div>
-					<?php get_template_part( 'widget-area-bottom' ); ?>
 				</div>
 			<!-- this row is ended at the footer -->
 
