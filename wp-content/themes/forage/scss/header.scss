@@ -1,0 +1,50 @@
+.hero-header {
+	background-size: cover;
+	box-shadow: inset 0px -5px 5px rgba(0,0,0,0.3);
+
+	.topbar {
+		margin-top: 2em;
+	}
+
+	.logo {
+		display: inline-block;
+		a {
+			background-image: url("img/logo.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 160px;
+			height: 100px;
+			display: block;
+			text-indent: -999em;
+		}
+	}
+
+	nav {
+		float: right;
+		margin: 4em 0 0;
+		ul {
+			li { 
+				float: left; 
+				margin-right: .5em; 
+				list-style: none;
+				font-size: 24px;
+				text-transform: lowercase;
+				a {
+					color: white;
+					padding: 10px;
+					&:hover {
+						background: #AFCD5C
+					}
+				}
+			}
+		}
+	}
+
+	.hero-text {
+		color: white;
+		font-size: 1.75em;
+		padding-left: 1em;
+		border-left: 20px solid #AFCD5C;
+		margin: 50px auto 150px;
+	}
+}
