@@ -1,5 +1,6 @@
-.hero-header {
+.hero-header, .page-header {
 	background-size: cover;
+	background-position: center center;
 	box-shadow: inset 0px -5px 5px rgba(0,0,0,0.3);
 
 	.topbar {
@@ -47,4 +48,11 @@
 		border-left: 20px solid #AFCD5C;
 		margin: 50px auto 150px;
 	}
+}
+
+.page-header {
+	.topbar {
+		margin-top: 0;
+	}
+	margin-bottom: 2em;
 }

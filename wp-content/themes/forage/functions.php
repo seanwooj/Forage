@@ -235,10 +235,10 @@ function foundation_widgets() {
 			'id' => 'foundation_sidebar_right',
 			'name' => __( 'Sidebar Right', 'foundation' ),
 			'description' => __( 'This sidebar is located on the right-hand side of each page.', 'foundation' ),
-			'before_widget' => '<div>',
-			'after_widget' => '</div>',
-			'before_title' => '<h5>',
-			'after_title' => '</h5>',
+			'before_widget' => '<div class="widget">',
+			'after_widget' => '</div></div>',
+			'before_title' => '<h5 class="widget-header">',
+			'after_title' => '</h5><div class="white-panel">',
 		) );
 
 	// Sidebar Footer Column One
@@ -324,7 +324,7 @@ function foundation_excerpt($text) {
                 $words = explode(' ', $text, $excerpt_length + 1);
                 if (count($words)> $excerpt_length) {
                         array_pop($words);
-                        array_push($words, '<br><br><a href="'.get_permalink($post->ID) .'" class="button secondary small">' . __('Continue Reading', 'foundation') . '</a>');
+                        array_push($words, '<br><br><a href="'.get_permalink($post->ID) .'" class="georgia">' . __('Continue Reading', 'foundation') . '</a>');
                         $text = implode(' ', $words);
                 }
         }
@@ -446,6 +446,10 @@ $foundation_shortcodes = trailingslashit( get_template_directory() ) . 'inc/shor
 
 if (file_exists($foundation_shortcodes)) {
 	require( $foundation_shortcodes );
+}
+
+function pr($d){
+	echo '<pre>'.print_r($d,true).'</pre>';
 }
 
 ?>

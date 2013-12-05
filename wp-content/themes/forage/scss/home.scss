@@ -1,8 +1,19 @@
 .main {
 	margin-top: 2em;
+	margin-bottom: 2em;
+	.white {
+		background: rgba(255,255,255,0.8);
+		padding: 2em;
+	}
 }
 
 article {
-	border-left: 20px solid #F7C92E;
-	padding-left: 1em;
+	h3 {
+		margin-top: 1em;
+		a {
+			background: #AFCD5C;
+			padding: 3px 10px;
+			color: white;
+		}
+	}
 }

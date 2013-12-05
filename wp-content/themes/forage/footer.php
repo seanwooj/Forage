@@ -14,7 +14,9 @@
 <!-- End Page -->
 
 <!-- Footer -->
-<footer class="row">
+<footer class="bottom">
+
+<div class="row">
 
 <?php if ( dynamic_sidebar('Sidebar Footer One') || dynamic_sidebar('Sidebar Footer Two') || dynamic_sidebar('Sidebar Footer Three') || dynamic_sidebar('Sidebar Footer Four')  ) : else : ?>
 
@@ -25,6 +27,8 @@
 </div>
 
 <?php endif; ?>
+
+</div>
 
 </footer>
 <!-- End Footer -->

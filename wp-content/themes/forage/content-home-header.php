@@ -2,8 +2,8 @@
 $post_id = get_the_id();
 $featured_image_id = get_post_thumbnail_id( $post_id );
 $featured_image_url = wp_get_attachment_url( $featured_image_id );
-?>
-<header class="page-header <?php if ( !is_page_template( 'home.php' ) ) { echo 'no-border'; } ?>" style="background-image:url('<?php echo esc_url( $featured_image_url ); ?>');">
+if ( ! empty( $featured_image_url ) ) : ?>
+<header class="hero-header <?php if ( !is_page_template( 'home.php' ) ) { echo 'no-border'; } ?>" style="background-image:url('<?php echo esc_url( $featured_image_url ); ?>');">
 	<div class="row">
 		<div class="large-12 columns">
 			<div class="topbar">
@@ -12,6 +12,12 @@ $featured_image_url = wp_get_attachment_url( $featured_image_id );
 					<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'menu_class' => 'left', 'container' => '', 'fallback_cb' => 'foundation_page_menu', 'walker' => new foundation_navigation() ) ); ?>
 				</nav>
 			</div>
+			<div class="row">
+				<div class="large-7 columns large-centered">
+					<h2 class="hero-text"><?php bloginfo( 'description' ); ?></h2>
+				</div>
+			</div>
 		</div>
 	</div>
 </header>
+<?php endif; ?>

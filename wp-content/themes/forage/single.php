@@ -10,20 +10,17 @@
  */
 
 get_header(); ?>
-
-    <!-- Main Content -->
-    <div class="large-9 columns" role="main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', 'single' ); ?>
-			<?php endwhile; ?>
-			
-		<?php endif; ?>
-
-    </div>
-    <!-- End Main Content -->
+	<?php if ( have_posts() ) : ?>
+		<?php while ( have_posts() ) : the_post(); ?>
+			<?php get_template_part( 'content', 'page-header' ); ?>
+			<div class="row">
+			    <!-- Main Content -->
+			    <div class="large-9 columns" role="main">
+					<?php get_template_part( 'content', 'single' ); ?>
+			    </div>
+			    <!-- End Main Content -->
+		<?php endwhile; ?>
+	<?php endif; ?>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

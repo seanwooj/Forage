@@ -28,11 +28,14 @@ Tags: two-columns
    Imports
 ----------------------------------------- */
 
+@import "colors";
 @import "foundation";
 @import "normalize";
 @import "header";
 @import "home";
 @import "fonts";
+@import "footer";
+@import "widget";
 
 /* -----------------------------------------
    Images
@@ -71,7 +74,7 @@ article .th {margin-bottom:10px; margin-bottom:1em;}
 ----------------------------------------- */
 
 body,h1,h2,h3,h4,h5,h6,p {font-family: 'Open Sans', sans-serif;}
-h1,h2,h3,h4,h5,h6,a:link {font-family: 'Desyrel'; font-weight: inherit;}
+h1,h2,h3,h4,h5,h6,a:link {font-family: 'Open Sans', sans-serif; font-weight: 300;}
 
 .site-title .subheader {margin-bottom:0;}
 
@@ -113,12 +116,37 @@ iframe,
 object {
   max-width: 100%;
 }
+
+html body .georgia {
+  font-family: georgia;
+  font-style: italic;
+  color: #666;
+}
+
+a.georgia {
+  &:after {
+    content: "»"
+  }
+}
 /* -----------------------------------------
    Globals
 ----------------------------------------- */
 
 body {
-  background: url('img/eggshell.jpg');
+  background-image: url('img/eggshell.jpg');
+  background-size: 120px;
+}
+
+.section-header {
+  background: #9DD4CF;
+  display: inline-block;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+  top: 18px;
+  a {
+    color: white;
+  }
 }
 
 /* -----------------------------------------
